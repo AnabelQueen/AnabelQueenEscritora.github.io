@@ -1,0 +1,1064 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: #88525f;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+main{
+  flex: 1;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #efa993;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #efa993;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #efa993;
+    border: 2px solid #efa993;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #88525f;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #efa993;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #efa993;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #88525f;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #efa993;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #88525f;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-redes {
+    position: absolute;
+    bottom: 50px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-redes a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #efa993;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #efa993;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: -5s;
+}
+
+.home-redes a:hover {
+    color: #88525f;
+}
+
+.home-redes a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #efa993;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-redes a:hover::before {
+    width: 100%;
+}
+
+.mockup {
+    width: 40%;
+    margin-left: 45px;
+    object-fit: cover;
+    height: calc(75vh - 60px);
+}
+
+/* Sección Acerca de mi */
+
+.acerca {
+    background: #efa993;
+    overflow: hidden;
+}
+
+.acerca .container-acerca {
+    width: 100%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+
+.container-acerca .titulo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container-acerca .titulo h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #88525f;
+}
+
+.container-acerca .titulo h1::after {
+    content: "";
+    height: 5px;
+    width: 100px;
+    background-color: #88525f;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+}
+
+.contenido {
+    float: right;
+    width: 55%;
+}
+
+.img-acerca {
+    float: left;
+    width: 40%;
+} 
+
+.img-acerca img {
+    width: 70%;
+    height: 400px;        /* Ajusta este valor según el alto de tu texto */
+    object-fit: cover;
+    margin-left: 75px;
+    margin-top: 0;
+}
+
+.contenido .bio p {
+    color: #ededed;
+    font-size: 17px;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.contenido .bio .boton {
+    margin-top: 50px;
+}
+
+.contenido .bio .boton a {
+    text-decoration: none;
+    padding: 8px 25px;
+    background-color: #88525f;
+    border-radius: 40px;
+    color: #efa993;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.contenido .bio .boton a:hover {
+    color: #efa993;
+    background-color: #ededed;
+    transition: 1s ease;
+}
+
+:root {
+    --title-color: #efa993;
+    --text-color: #ededed;
+    --shape-gradient:  #efa993 , #fceadb , #88525f , #ba6e56;
+
+    --body-gradient: linear-gradient(180deg, #ba6e56, #fceadb);
+
+    --container-color: #88525f;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+.libros {
+    
+    display: grid;
+    place-items: center;
+    background: var(--body-gradient);
+    padding-block: 4.5rem;
+}
+
+.libro-container {
+    margin-inline: 1.5rem;
+    display: grid;
+    grid-template-columns:repeat(3, 328px);
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.libro-articulo {
+    position: relative;
+    background-color: var(--container-color);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 20px 24px hsl(235, 32%, 15%, .2);
+    overflow: hidden;
+}
+
+.img-libro {
+    width: 350px;
+    margin-bottom: 1rem;
+    animation: float-img 2.5s ease-in-out infinite;
+}
+
+.libro-titulo {
+    color: var(--title-color);
+    font-size: var(--text-color);
+    line-height: 100%;
+    margin-bottom: 1rem;
+}
+
+.libro-descripcion {
+    font-size: var(--text-color);
+}
+
+.libro-dato {
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes float-img {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-.75rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.botones-libro {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-comprar,
+.btn-reservar {
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar {
+  background-color: #efa993; /* Verde */
+}
+
+.btn-comprar:hover {
+  background-color: #ba6e56;
+}
+
+.btn-reservar {
+  background-color: #efa993; /* WhatsApp verde */
+}
+
+.btn-reservar:hover {
+  background-color: #1EBE57;
+}
+
+
+/* Efecto TAB Noticias y Eventos */
+
+.hero {
+    width: 80%;
+    position: relative;
+    margin: 100px auto;
+    overflow: hidden;
+  }
+  
+  .tab-boton {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab-label {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  #noticia:checked ~ .tab-boton label[for="noticia"],
+  #evento:checked ~ .tab-boton label[for="evento"] {
+    color: #efa993;
+    border-bottom: 2px solid #efa993;
+  }
+  
+  .tab-content {
+    display: none;
+    position: relative;
+    animation: fade 0.5s ease-in;
+  }
+  
+  #noticia:checked ~ .noticia-content {
+    display: block;
+  }
+  
+  #evento:checked ~ .evento-content {
+    display: block;
+  }
+  
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .noticia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% auto;
+  }
+  
+  .contenido-izq {
+    flex-basis: 50%;
+  }
+  
+  .contenido-izq p {
+    font-size: 16px;
+    padding: 30px 0;
+  }
+  
+  .contenido-izq a {
+    width: 150px;
+    display: block;
+    padding: 8px 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #efa993;
+    color: #ededed;
+    text-align: center;
+  }
+  
+  .contenido-der {
+    flex-basis: 50%;
+    text-align: center;
+  }
+  
+  .contenido-der img {
+    width: 350px;
+  }
+
+/* Diario de una autora */
+
+.titulo-principal {
+  color: #88525f;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+
+.cont-diario {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--body-gradient);
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.fila-diario {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 80px;
+  margin-bottom: 110px;
+}
+
+.tarjeta-diario {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  transition: 1s;
+}
+
+.img-diario {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.img-diario img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contenido-diario {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  top: 0;
+  left: 0%;
+  background: #ededed;
+  z-index: -1;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  transform: scale(0.9);
+  transition: 1s;
+  color: #000;
+}
+
+.contenido-diario p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #000;
+  margin: 0;
+}
+
+.tarjeta-diario:hover {
+  filter: blur(0) !important;
+  transform: translateX(-100px) rotate(-5deg);
+}
+
+.fila-diario:hover .tarjeta-diario {
+  filter: blur(2px);
+}
+
+.tarjeta-diario:hover .contenido-diario {
+  left: 90%;
+}
+
+/* Comentarios */
+
+.reseñas-section {
+  background: #efa993;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.carrusel-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+}
+
+.carrusel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.reseña {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: #88525f;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.reseña img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.nombre {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.estrellas {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00000088;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.flecha.izquierda {
+  left: -10px;
+}
+
+.flecha.derecha {
+  right: -10px;
+}
+
+/* Footer */
+
+/* --- Estilos del Footer --- */
+footer {
+  background: #efa993;
+}
+
+.relleno {
+  width: 100%;
+  background: linear-gradient(to right, #ba6e56, #88525f);
+  color: #ededed;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+  box-sizing: border-box; /* Buena práctica para incluir padding en el ancho total */
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  flex-basis: 30%; /* Ajustado para distribuir mejor el espacio entre 3 columnas */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Columna 1: Logo */
+.logotipo {
+  width: 250px;
+  max-width: 100%; /* Asegura que no se desborde */
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+}
+
+/* Columna 2: Textos */
+.col h3 {
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Columna 2: Redes sociales */
+.redes-dos i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  color: #000;
+  background: #ededed;
+  margin-right: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.redes-dos i:hover {
+    transform: scale(1.1);
+}
+
+
+/* Columna 3: Newsletter */
+#newsletter .iframe-container {
+  width: 100%;
+  margin-top: -100px; /* Ajuste para subir el iframe */
+}
+
+#newsletter iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Línea divisoria y derechos */
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ededed;
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/* --- Media Queries para Responsividad (La Magia) --- */
+
+/* Para tablets y dispositivos más pequeños */
+@media (max-width: 850px) {
+  .relleno {
+    border-top-left-radius: 80px; /* Reducimos el radio para que se vea bien */
+  }
+
+  .row {
+    flex-direction: column; /* Apila las columnas verticalmente */
+    align-items: center; /* Centra las columnas */
+  }
+
+  .col {
+    flex-basis: 100%; /* Cada columna ocupa todo el ancho */
+    max-width: 450px; /* Un ancho máximo para que no sea demasiado grande en tablets */
+    text-align: center; /* Centra el texto dentro de cada columna */
+    margin-bottom: 40px;
+  }
+  
+  .logotipo {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .col h3, .email-id {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #newsletter {
+      margin-bottom: 0;
+  }
+
+  #newsletter .iframe-container {
+    margin-top: 0; /* Quitamos el margen negativo para un flujo normal */
+  }
+}
+
+/* =================================================================== */
+/* ============== CÓDIGO RESPONSIVE ============== */
+/* =================================================================== */
+
+/* --- Estilos para Pantallas Medianas (Tablets y Portátiles Pequeños) --- */
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px 5%; /* Reducimos el padding lateral */
+    }
+
+    .navbar a {
+        margin-left: 20px; /* Menos espacio entre enlaces */
+    }
+
+    .home {
+        padding: 0 5%;
+    }
+
+    .mockup {
+        width: 45%; /* La imagen se hace un poco más pequeña */
+        margin-left: 25px;
+    }
+
+    .acerca .container-acerca {
+        padding: 50px 5%;
+    }
+
+    .img-acerca {
+        width: 45%;
+    }
+
+    .img-acerca img {
+        margin-left: 0;
+    }
+
+    .contenido {
+        width: 50%;
+    }
+
+    .libro-container {
+        /* Pasamos de 3 columnas a 2 para que no se vea apretado */
+        grid-template-columns: repeat(2, 328px);
+    }
+    
+    .fila-diario {
+        gap: 40px; /* Menos espacio entre tarjetas */
+    }
+
+    .row {
+        width: 90%;
+    }
+
+    .col {
+       flex-basis: 48%; /* Dos columnas principales y el newsletter debajo */
+       margin-bottom: 30px;
+    }
+
+    #newsletter .iframe-container {
+        margin-top: 0; /* Quitamos el margen negativo */
+    }
+}
+
+
+/* --- Estilos para Pantallas Pequeñas (Móviles) --- */
+@media (max-width: 768px) {
+
+    /* --- Header y Navegación --- */
+    .header {
+        flex-direction: column; /* El logo se pone arriba y la navegación abajo */
+        align-items: flex-start;
+        padding: 20px 5%;
+        background: #88525f; /* Añadimos un fondo para que sea legible al hacer scroll */
+    }
+
+    .navbar {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .navbar a {
+        display: block; /* Hacemos que cada enlace ocupe una línea */
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    /* --- Sección Inicio --- */
+    .home {
+        flex-direction: column-reverse; /* Ponemos el texto arriba de la imagen */
+        justify-content: center;
+        text-align: center;
+        padding-top: 150px; /* Espacio para el header fijo */
+        height: auto;
+        padding-bottom: 50px;
+    }
+    
+    .mockup {
+       width: 250px;
+       height: 250px;
+       border-radius: 50%; /* Hacemos la imagen redonda para un look moderno */
+       margin: 0 0 30px 0;
+       object-fit: cover;
+    }
+    
+    .home-content h1 {
+        font-size: 38px;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+    }
+
+    .home-content .btn-box {
+        width: 100%;
+        justify-content: center;
+        gap: 20px; /* Espacio entre botones */
+    }
+
+    .home-redes {
+        position: static; /* Quitamos el posicionamiento absoluto */
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    /* --- Sección Sobre Mí --- */
+    .acerca .container-acerca {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-acerca, .contenido {
+        float: none; /* Quitamos el float */
+        width: 100%;
+        text-align: center;
+    }
+    
+    .img-acerca img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto 30px auto;
+    }
+
+    .contenido .bio p {
+        text-align: left;
+    }
+    
+    .contenido .bio .boton {
+        margin-top: 30px;
+    }
+
+    /* --- Sección Mis Libros --- */
+    .libro-container {
+        grid-template-columns: 1fr; /* Una sola columna para los libros */
+        margin-inline: 1rem;
+    }
+
+    /* --- Sección Noticias y Eventos --- */
+    .hero {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .noticia {
+        flex-direction: column; /* Apilamos la imagen y el texto */
+    }
+
+    .contenido-izq {
+        order: 2; /* El texto va después de la imagen */
+        text-align: center;
+    }
+    
+    .contenido-izq a {
+        margin: 0 auto;
+    }
+
+    .contenido-der {
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .contenido-der img {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .tab-boton {
+        justify-content: center;
+    }
+    .tab-label {
+        margin-right: 20px;
+    }
+
+    /* --- Sección Diario de una Autora --- */
+    .cont-diario {
+        padding-top: 20px;
+    }
+    
+    .fila-diario {
+        flex-direction: column; /* Apilamos las tarjetas del diario */
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    /* Desactivamos el efecto hover que no funciona en móviles */
+    .tarjeta-diario:hover {
+        transform: none;
+    }
+    .fila-diario:hover .tarjeta-diario {
+        filter: none;
+    }
+    .tarjeta-diario:hover .contenido-diario {
+        left: 0;
+    }
+    .contenido-diario {
+        z-index: 1;
+        background: rgba(237, 237, 237, 0.9);
+        transform: scale(1);
+    }
+    
+
+    /* --- Sección Comentarios --- */
+    .reseña {
+        flex: 0 0 90%; /* Cada reseña ocupa casi todo el ancho */
+    }
+
+    /* --- Footer --- */
+    .relleno {
+        border-top-left-radius: 75px;
+        padding-top: 50px;
+    }
+    
+    .row {
+        flex-direction: column; /* Apilamos las columnas del footer */
+        align-items: center;
+        text-align: center;
+    }
+
+    .col {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .logotipo {
+        margin: 0 auto 20px auto;
+    }
+
+    .email-id {
+        margin: 20px auto;
+    }
+}
+
+/* Ajuste adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 32px;
+    }
+    .home-content h3 {
+        font-size: 18px;
+    }
+    .btn-box a {
+        width: 130px;
+        font-size: 16px;
+    }
+    
+    .libro-articulo {
+        padding: 1.5rem;
+    }
+}

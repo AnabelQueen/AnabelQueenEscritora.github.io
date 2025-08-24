@@ -1,0 +1,245 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: #efa993;
+    color: #333;
+  }
+  
+  .contenedor-articulo {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  
+  .titulo-entrevista {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #532c17;
+  }
+  
+  /* Info del libro */
+  .info-libro {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .imagen-libro img {
+    width: 200px;
+    border-radius: 8px;
+  }
+  
+  .detalle-libro {
+    flex: 1;
+  }
+  
+  .btn-compra {
+    display: inline-block;
+    margin-top: 10px;
+    background: #d2794d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+  
+  .btn-compra:hover {
+    background: #b9633c;
+  }
+  
+  /* Sinopsis y autora */
+  .sinopsis-autora {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .sinopsis {
+    flex: 2;
+    color: #fff;
+  }
+  
+  .foto-autora img {
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Opiniones */
+  .opinion-resena {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .bloque {
+    flex: 1;
+    background: #88525f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    color: #efa993;
+  }
+  
+  /* Reseña */
+  .resena-libro {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .resena-bloque {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .imagen-resena img {
+    width: 250px;
+    border-radius: 10px;
+  }
+  
+  .creditos {
+    font-size: 0.85em;
+    color: #88525f;
+    margin-top: 5px;
+  }
+  
+  .izquierda {
+    order: 0;
+  }
+  
+  .derecha {
+    order: 1;
+  }
+  
+  .texto-resena {
+    flex: 1;
+    color: #fff;
+  }
+  
+  /* Pie de página */
+  .pie {
+    text-align: center;
+    padding: 30px;
+    background: #88525f;
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #efa993;
+  }
+  
+  /* ===================================================== */
+/* =============== CÓDIGO RESPONSIVE =================== */
+/* ===================================================== */
+
+/* --- Pantallas Grandes (≥1200px) --- */
+@media (min-width: 1200px) {
+  .contenedor-articulo {
+    max-width: 1200px;
+    padding: 60px 40px;
+  }
+
+  .titulo-entrevista {
+    font-size: 3em;
+  }
+
+  .imagen-resena img {
+    width: 300px;
+  }
+}
+
+/* --- Pantallas Medianas (Tablets y Portátiles Pequeños) --- */
+@media (max-width: 1024px) {
+  .titulo-entrevista {
+    font-size: 2.2em;
+  }
+
+  .info-libro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imagen-libro img {
+    width: 180px;
+  }
+
+  .sinopsis-autora {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sinopsis {
+    order: 2;
+  }
+
+  .foto-autora {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .resena-bloque {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .imagen-resena img {
+    width: 220px;
+  }
+}
+
+/* --- Pantallas Pequeñas (Smartphones ≤768px) --- */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95em;
+  }
+
+  .titulo-entrevista {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .info-libro,
+  .sinopsis-autora,
+  .opinion-resena,
+  .resena-bloque {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .imagen-libro img,
+  .foto-autora img,
+  .imagen-resena img {
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+  }
+
+  .detalle-libro {
+    text-align: center;
+  }
+
+  .bloque {
+    flex: 1 1 100%;
+  }
+
+  .texto-resena {
+    text-align: justify;
+  }
+
+  .pie {
+    padding: 20px 10px;
+    font-size: 0.8em;
+  }
+}

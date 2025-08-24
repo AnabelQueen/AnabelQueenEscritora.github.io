@@ -1,0 +1,177 @@
+/* === Estilo general === */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efa993;
+    font-family: 'Cormorant Garamond', serif;
+    color: #3e3e3e;
+    line-height: 1.6;
+  }
+  
+  /* === Encabezado tipo revista === */
+  .encabezado {
+    background-color: #88525f;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 4px solid #ddb892;
+  }
+  
+  .encabezado h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #efa993;
+  }
+  
+  .subtitulo {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #ededed;
+  }
+  
+  /* === Bloques de contenido === */
+  .contenido {
+    padding: 40px 10%;
+  }
+  
+  .seccion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .seccion:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .texto {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .texto h2 {
+    font-size: 2.3rem;
+    color: #7f5539;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #7f5539;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  .texto h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #ededed;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+  
+  /* === Imagen estilo revista === */
+  .imagen-destacada {
+    width: 25%;
+    min-width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+  
+  /* === Pie de página === */
+  .pie {
+    background-color: #88525f;
+    text-align: center;
+    padding: 30px 20px;
+    font-style: italic;
+    font-size: 1.3rem;
+    border-top: 4px solid #b08968;
+    color: #efa993;
+  }
+  
+  /* === Responsive para móviles === */
+  @media (max-width: 768px) {
+    .seccion {
+      flex-direction: column !important;
+      text-align: center;
+    }
+  
+    .imagen-destacada {
+      width: 100%;
+    }
+  }
+  
+/* =================================================================== */
+/* ============== CÓDIGO RESPONSIVE ============== */
+/* =================================================================== */
+
+/* --- Estilos para Pantallas Medianas (Tablets y Portátiles Pequeños) --- */
+@media (max-width: 1024px) {
+    .encabezado h1 {
+        font-size: 3rem; /* Hacemos el título un poco más pequeño */
+    }
+
+    .contenido {
+        padding: 40px 5%; /* Reducimos el espacio lateral */
+    }
+
+    .seccion {
+        gap: 20px; /* Menos espacio entre imagen y texto */
+    }
+
+    .texto h2 {
+        font-size: 2rem;
+    }
+
+    .imagen-destacada {
+        width: 35%; /* La imagen ocupa un poco más de espacio */
+    }
+}
+
+
+/* --- Estilos para Pantallas Pequeñas (Móviles) --- */
+@media (max-width: 768px) {
+    .encabezado {
+        padding: 40px 20px;
+    }
+
+    .encabezado h1 {
+        font-size: 2.5rem; /* Título más adaptado a móviles */
+    }
+
+    .subtitulo {
+        font-size: 1.1rem;
+    }
+
+    .contenido {
+        padding: 30px 5%;
+    }
+
+    .seccion,
+    .seccion:nth-child(even) {
+        flex-direction: column !important; /* Apilamos imagen y texto en una columna */
+    }
+
+    .imagen-destacada {
+        width: 100%; /* La imagen ocupa todo el ancho disponible */
+        max-width: 400px; /* Pero con un límite para que no sea gigante */
+        margin-bottom: 20px;
+    }
+
+    .texto {
+        text-align: center; /* Centramos los títulos del bloque */
+    }
+
+    .texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .texto p {
+        text-align: left; /* El texto de los párrafos lo alineamos a la izquierda para facilitar la lectura */
+    }
+
+    .pie {
+        font-size: 1.1rem;
+        padding: 25px 20px;
+    }
+}

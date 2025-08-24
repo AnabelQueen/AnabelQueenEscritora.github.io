@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efa993;
+    color: #333;
+  }
+  
+  .encabezado {
+    background-color: #88525f;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .titulo-principal {
+    font-size: 2.5em;
+    margin: 0;
+    color: #efa993;
+  }
+  
+  .contenedor-evento {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .evento-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+  
+  .evento-texto {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .evento-texto h2 {
+    font-size: 1.8em;
+    color: #7a5c3e;
+    margin-bottom: 10px;
+  }
+
+  .evento-texto p{
+    color: #fff;
+  }
+  
+  .evento-mapa {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .galeria {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+  
+  .galeria img {
+    width: 32%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+  
+  .pie {
+    background-color: #88525f;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 0.9em;
+    color: #efa993;
+  }
+  
+  /* =================================================================== */
+/* ============== CÓDIGO RESPONSIVE ============== */
+/* =================================================================== */
+
+/* --- Estilos para Pantallas Medianas (Tablets y Portátiles Pequeños) --- */
+@media (max-width: 1024px) {
+    .contenedor-evento {
+        padding: 0 30px; /* Aumentamos un poco el padding lateral */
+    }
+
+    .evento-info {
+        gap: 30px; /* Reducimos el espacio entre texto y mapa */
+    }
+
+    .galeria img {
+        /* Hacemos que la imagen del medio sea más grande para crear un diseño asimétrico y atractivo */
+        width: 100%; /* Ocupan todo el ancho para apilarse */
+        margin-bottom: 20px; /* Espacio entre las fotos apiladas */
+    }
+
+    .galeria {
+        /* En lugar de 3 columnas, pasamos a 1 para mejor visualización */
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* --- Estilos para Pantallas Pequeñas (Móviles) --- */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 2em; /* Título más pequeño para móviles */
+    }
+
+    .contenedor-evento {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .evento-info {
+        /* Apilamos el texto y el mapa verticalmente */
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .evento-texto h2 {
+        font-size: 1.5em;
+    }
+
+    .evento-mapa iframe {
+        /* Hacemos que el mapa se ajuste al 100% del ancho y le damos una altura fija */
+        width: 100%;
+        height: 300px;
+    }
+
+    .galeria {
+        margin-bottom: 40px;
+        gap: 15px; /* Menos espacio entre fotos */
+    }
+
+    .galeria img {
+        width: 100%; /* Cada imagen ocupa el ancho completo */
+    }
+    
+    .pie {
+        padding: 20px 10px;
+    }
+}

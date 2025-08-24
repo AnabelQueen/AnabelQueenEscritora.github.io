@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efa993;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .encabezado {
+    background-color: #88525f;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .titulo-principal {
+    font-size: 2.5em;
+    margin: 0;
+    color: #efa993;
+  }
+  
+  .entrevista {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .entrevista-titulo {
+    font-size: 2em;
+    color: #7a5c3e;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .bloque-entrevista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: flex-start;
+  }
+  
+  .imagen-izquierda .entrevista-imagen {
+    order: 0;
+  }
+  
+  .imagen-derecha .entrevista-imagen {
+    order: 1;
+  }
+  
+  .imagen-izquierda .entrevista-texto {
+    order: 1;
+  }
+  
+  .imagen-derecha .entrevista-texto {
+    order: 0;
+  }
+  
+  .entrevista-imagen {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .entrevista-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+  
+  .ilustradora {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #6b5440;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  .entrevista-texto {
+    flex: 2;
+    min-width: 300px;
+  }
+
+  .entrevista-texto p {
+    color: #fff;
+  }
+  
+  .pie {
+    background-color: #88525f;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 0.9em;
+    color: #efa993;
+  }
+  
+  /* =================================================================== */
+/* ============== CÓDIGO RESPONSIVE ============== */
+/* =================================================================== */
+
+/* --- Estilos para Pantallas Medianas (Tablets y Portátiles Pequeños) --- */
+@media (max-width: 1024px) {
+    .entrevista {
+        padding: 0 30px; /* Damos un poco más de espacio lateral */
+    }
+
+    .titulo-principal,
+    .entrevista-titulo {
+        font-size: 2.2em; /* Reducimos un poco el tamaño de los títulos */
+    }
+
+    .bloque-entrevista {
+        gap: 25px; /* Menos espacio entre la imagen y el texto */
+    }
+}
+
+
+/* --- Estilos para Pantallas Pequeñas (Móviles) --- */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 1.8em; /* Hacemos los títulos más pequeños para móvil */
+    }
+
+    .entrevista {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .entrevista-titulo {
+        font-size: 1.6em;
+        margin-bottom: 30px;
+    }
+
+    .bloque-entrevista {
+        /* Apilamos la imagen y el texto en una sola columna */
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    /* Anulamos el orden para que en móvil siempre aparezca primero la imagen y luego el texto */
+    .imagen-izquierda .entrevista-imagen,
+    .imagen-derecha .entrevista-imagen,
+    .imagen-izquierda .entrevista-texto,
+    .imagen-derecha .entrevista-texto {
+        order: 0;
+    }
+
+    .entrevista-imagen {
+        /* Hacemos que la imagen no sea excesivamente ancha en la columna */
+        max-width: 400px;
+        margin: 0 auto; /* Centramos el bloque de la imagen */
+    }
+
+    .pie {
+        padding: 20px 10px;
+    }
+}
