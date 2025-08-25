@@ -795,270 +795,102 @@ hr {
 /* ============== CÓDIGO RESPONSIVE ============== */
 /* =================================================================== */
 
-/* --- Estilos para Pantallas Medianas (Tablets y Portátiles Pequeños) --- */
-@media (max-width: 1024px) {
-    .header {
-        padding: 20px 5%; /* Reducimos el padding lateral */
-    }
+/* =========================
+RESPONSIVE COMPLETO NUEVO
+========================= */
 
-    .navbar a {
-        margin-left: 20px; /* Menos espacio entre enlaces */
-    }
-
-    .home {
-        padding: 0 5%;
-    }
-
-    .mockup {
-        width: 45%; /* La imagen se hace un poco más pequeña */
-        margin-left: 25px;
-    }
-
-    .acerca .container-acerca {
-        padding: 50px 5%;
-    }
-
-    .img-acerca {
-        width: 45%;
-    }
-
-    .img-acerca img {
-        margin-left: 0;
-    }
-
-    .contenido {
-        width: 50%;
-    }
-
-    .libro-container {
-        /* Pasamos de 3 columnas a 2 para que no se vea apretado */
-        grid-template-columns: repeat(2, 328px);
-    }
-    
-    .fila-diario {
-        gap: 40px; /* Menos espacio entre tarjetas */
-    }
-
-    .row {
-        width: 90%;
-    }
-
-    .col {
-       flex-basis: 48%; /* Dos columnas principales y el newsletter debajo */
-       margin-bottom: 30px;
-    }
-
-    #newsletter .iframe-container {
-        margin-top: 0; /* Quitamos el margen negativo */
-    }
+/* Pantallas medianas - hasta 1024px */
+@media screen and (max-width:1024px){
+    .header { padding: 20px 5%; }
+    .navbar a { margin-left: 20px; }
+    .home { padding: 0 5%; flex-direction: column; align-items: center; text-align: center; }
+    .mockup { width: 50%; height: auto; margin: 20px 0; }
+    .home-content h1 { font-size: 42px; }
+    .home-content h3 { font-size: 24px; }
+    .home-content .btn-box { flex-direction: column; gap: 15px; width: 100%; align-items: center; }
+    .acerca .container-acerca { flex-direction: column; align-items: center; padding: 50px 5%; }
+    .img-acerca, .contenido { width: 100%; float: none; text-align: center; margin: 0 auto; }
+    .img-acerca img { width: 70%; height: auto; }
+    .libro-container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .fila-diario { gap: 40px; justify-content: center; }
+    .reseña { flex: 0 0 45%; }
+    .row { width: 90%; flex-wrap: wrap; justify-content: center; }
 }
 
+/* Tablets - hasta 900px */
+@media screen and (max-width:900px){
+    .mockup { width: 60%; height: auto; }
+    .home-content h1 { font-size: 38px; }
+    .home-content h3 { font-size: 22px; }
+    .home-content .btn-box a { width: 45%; }
+    .libro-container { grid-template-columns: 1fr; }
+    .libro-articulo { width: 90%; margin: 0 auto 20px; }
+    .acerca .container-acerca { padding: 40px 10px; }
+    .img-acerca img { width: 80%; margin-bottom: 20px; }
+    .fila-diario { flex-direction: column; gap: 30px; margin-bottom: 30px; }
+    .tarjeta-diario:hover { transform: none; }
+    .tarjeta-diario:hover .contenido-diario { left: 0; }
+    .contenido-diario { transform: scale(1); background: rgba(237,237,237,0.9); }
+    .reseña { flex: 0 0 90%; }
+    .newsletter { width: 90%; }
+    .home-redes { justify-content: center; width: 100%; margin-top: 20px; }
+}
 
-/* --- Estilos para Pantallas Pequeñas (Móviles) --- */
-@media (max-width: 768px) {
+/* Móviles - hasta 700px */
+@media screen and (max-width:700px){
+   .header {
+        flex-direction: column;
+        align-items: center; /* Centra el contenido horizontalmente */
+        padding: 20px 0;
+        background: transparent; /* O puedes dejar un color suave */
+    }
 
-    /* --- Header y Navegación --- */
-    .header {
-        flex-direction: column; /* El logo se pone arriba y la navegación abajo */
-        align-items: flex-start;
-        padding: 20px 5%;
-        background: #88525f; /* Añadimos un fondo para que sea legible al hacer scroll */
+    .logo {
+        margin-bottom: 10px; /* Separación del menú */
+        text-align: center;
     }
 
     .navbar {
-        margin-top: 15px;
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* Para que los enlaces bajen si no caben */
+        justify-content: center; /* Centra los enlaces */
+        gap: 15px; /* Espacio entre enlaces */
+        margin: 0;
+        padding: 0;
     }
 
     .navbar a {
-        display: block; /* Hacemos que cada enlace ocupe una línea */
-        margin: 5px 0;
-        font-size: 16px;
+        margin: 5px 10px; /* Ajusta el espaciado entre enlaces */
+        font-size: 16px; /* Tamaño legible */
     }
-
-    /* --- Sección Inicio --- */
-    .home {
-        flex-direction: column-reverse; /* Ponemos el texto arriba de la imagen */
-        justify-content: center;
-        text-align: center;
-        padding-top: 150px; /* Espacio para el header fijo */
-        height: auto;
-        padding-bottom: 50px;
-    }
-    
-    .mockup {
-       width: 250px;
-       height: 250px;
-       border-radius: 50%; /* Hacemos la imagen redonda para un look moderno */
-       margin: 0 0 30px 0;
-       object-fit: cover;
-    }
-    
-    .home-content h1 {
-        font-size: 38px;
-    }
-
-    .home-content h3 {
-        font-size: 22px;
-    }
-
-    .home-content .btn-box {
-        width: 100%;
-        justify-content: center;
-        gap: 20px; /* Espacio entre botones */
-    }
-
-    .home-redes {
-        position: static; /* Quitamos el posicionamiento absoluto */
-        width: 100%;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 30px;
-    }
-
-    /* --- Sección Sobre Mí --- */
-    .acerca .container-acerca {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .img-acerca, .contenido {
-        float: none; /* Quitamos el float */
-        width: 100%;
-        text-align: center;
-    }
-    
-    .img-acerca img {
-        width: 70%;
-        height: auto;
-        margin: 0 auto 30px auto;
-    }
-
-    .contenido .bio p {
-        text-align: left;
-    }
-    
-    .contenido .bio .boton {
-        margin-top: 30px;
-    }
-
-    /* --- Sección Mis Libros --- */
-    .libro-container {
-        grid-template-columns: 1fr; /* Una sola columna para los libros */
-        margin-inline: 1rem;
-    }
-
-    /* --- Sección Noticias y Eventos --- */
-    .hero {
-        width: 90%;
-        margin: 50px auto;
-    }
-
-    .noticia {
-        flex-direction: column; /* Apilamos la imagen y el texto */
-    }
-
-    .contenido-izq {
-        order: 2; /* El texto va después de la imagen */
-        text-align: center;
-    }
-    
-    .contenido-izq a {
-        margin: 0 auto;
-    }
-
-    .contenido-der {
-        order: 1;
-        margin-bottom: 20px;
-    }
-
-    .contenido-der img {
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .tab-boton {
-        justify-content: center;
-    }
-    .tab-label {
-        margin-right: 20px;
-    }
-
-    /* --- Sección Diario de una Autora --- */
-    .cont-diario {
-        padding-top: 20px;
-    }
-    
-    .fila-diario {
-        flex-direction: column; /* Apilamos las tarjetas del diario */
-        align-items: center;
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-    
-    /* Desactivamos el efecto hover que no funciona en móviles */
-    .tarjeta-diario:hover {
-        transform: none;
-    }
-    .fila-diario:hover .tarjeta-diario {
-        filter: none;
-    }
-    .tarjeta-diario:hover .contenido-diario {
-        left: 0;
-    }
-    .contenido-diario {
-        z-index: 1;
-        background: rgba(237, 237, 237, 0.9);
-        transform: scale(1);
-    }
-    
-
-    /* --- Sección Comentarios --- */
-    .reseña {
-        flex: 0 0 90%; /* Cada reseña ocupa casi todo el ancho */
-    }
-
-    /* --- Footer --- */
-    .relleno {
-        border-top-left-radius: 75px;
-        padding-top: 50px;
-    }
-    
-    .row {
-        flex-direction: column; /* Apilamos las columnas del footer */
-        align-items: center;
-        text-align: center;
-    }
-
-    .col {
-        flex-basis: 100%;
-        margin-bottom: 40px;
-    }
-    
-    .logotipo {
-        margin: 0 auto 20px auto;
-    }
-
-    .email-id {
-        margin: 20px auto;
-    }
+    .home { flex-direction: column-reverse; padding-top: 150px; padding-bottom: 50px; height: auto; }
+    .home-redes { flex-wrap: wrap; padding-top: 150px; padding-bottom: 50px; height: auto; }
+    .mockup { width: 70%; height: auto; margin-bottom: 20px; border-radius: 20px; }
+    .home-content h1 { font-size: 32px; }
+    .home-content h3 { font-size: 20px; }
+    .home-content .btn-box { flex-direction: column; gap: 15px; width: 100%; }
+    .acerca .container-acerca { flex-direction: column; align-items: center; padding: 20px 5%; }
+    .img-acerca img { width: 90%; margin-bottom: 20px; }
+    .contenido .bio p { text-align: center; }
+    .libro-container { grid-template-columns: 1fr; width: 100%; margin: 0 auto; }
+    .fila-diario { flex-direction: column; align-items: center; gap: 20px; }
+    .reseña { flex: 0 0 95%; }
+    .newsletter { width: 95%; }
+    .footer .row { flex-direction: column; text-align: center; }
 }
 
-/* Ajuste adicional para pantallas muy pequeñas */
-@media (max-width: 480px) {
-    .home-content h1 {
-        font-size: 32px;
-    }
-    .home-content h3 {
-        font-size: 18px;
-    }
-    .btn-box a {
-        width: 130px;
-        font-size: 16px;
-    }
-    
-    .libro-articulo {
-        padding: 1.5rem;
-    }
+/* Móviles pequeños - hasta 500px */
+@media screen and (max-width:500px){
+    .home-content h1 { font-size: 28px; }
+    .home-content h3 { font-size: 18px; }
+    .home-content .btn-box a { width: 100%; font-size: 16px; }
+    .home-redes { width: 100%; font-size: 16px; }
+    .mockup { width: 90%; height: auto; margin-bottom: 15px; border-radius: 15px; }
+    .libro-articulo { width: 95%; padding: 15px; }
+    .img-acerca img { width: 100%; margin: 0 auto 15px; }
+    .contenido .bio p { font-size: 14px; }
+    .fila-diario { gap: 15px; }
+    .reseña { flex: 0 0 100%; }
+    .newsletter { display: none; }
+    .newsletter--modifier { display: block; width: 100%; }
 }
